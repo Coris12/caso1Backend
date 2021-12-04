@@ -74,14 +74,14 @@ public class AuthController {
                 = new Usuario(nuevoUsuario.getNombre(), nuevoUsuario.getNombreUsuario(), nuevoUsuario.getEmail(),
                         passwordEncoder.encode(nuevoUsuario.getPassword()));
         Set<Rol> roles = new HashSet<>();
-        //roles.add(rolService.getByRolNombre(RolNombre.ROLE_ESTUDIANTE).get());
+        //roles.add(rolService.getByRolNombre(RolNombre.ROLE_TALLER).get());
          if (nuevoUsuario.getRoles().contains("taller")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_TALLER).get());
         }
         if (nuevoUsuario.getRoles().contains("concesionaria")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_CONCESONARIA).get());
         }
-        if (nuevoUsuario.getRoles().contains("coomercializadora")) {
+        if (nuevoUsuario.getRoles().contains("comercializadora")) {
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_COMERCIALIZADORA).get());
         }
 
@@ -110,3 +110,4 @@ public class AuthController {
         return new ResponseEntity(jwt, HttpStatus.OK);
     }
 }
+///prueba
