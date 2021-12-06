@@ -16,6 +16,7 @@ import javax.persistence.ManyToOne;
  *
  * @author corin
  */
+//crear del vehiculo 
 @Entity
 public class SolicitudGarantia {
 
